@@ -1,0 +1,385 @@
+/* Outpost Arcadia Mars Theme for Obsidian Publish */
+/* Custom dark theme with JetBrains Mono font and Mars-inspired colors */
+/* Version: 1.0.1 - Cache Bust: 2025-01-27-14:30 */
+
+/* Import JetBrains Mono font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&v=2');
+
+/* Force dark theme and apply Mars color scheme */
+.theme-dark, .theme-light {
+  /* Background Colors - Deep space blacks and Mars dust grays */
+  --background-primary: #0a0a0a;
+  --background-primary-alt: #0f0f0f;
+  --background-secondary: #1a1a1a;
+  --background-secondary-alt: #151515;
+  --background-accent: #2a2a2a;
+  --background-modifier-border: #3255a4;
+  --background-modifier-border-hover: #00a1e4;
+  --background-modifier-border-focus: #00a1e4;
+  --background-modifier-form-field: #1a1a1a;
+  --background-modifier-form-field-highlighted: #2a2a2a;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+  --background-modifier-success: #197300;
+  --background-modifier-error: #cd5c5c;
+  --background-modifier-error-rgb: 205, 92, 92;
+  --background-modifier-error-hover: #d67373;
+  --background-modifier-cover: rgba(10, 10, 10, 0.9);
+  
+  /* Text Colors - High contrast for readability */
+  --text-normal: #e6e6e6;
+  --text-muted: #b3b3b3;
+  --text-accent: #00a1e4;
+  --text-accent-hover: #33b3e8;
+  --text-faint: #808080;
+  --text-error: #ff6b6b;
+  --text-error-hover: #ff8787;
+  --text-highlight-bg: rgba(0, 161, 228, 0.2);
+  --text-highlight-bg-active: rgba(0, 161, 228, 0.3);
+  --text-selection: rgba(0, 161, 228, 0.25);
+  
+  /* Interactive Elements - Mars atmosphere blues */
+  --interactive-normal: #2a2a2a;
+  --interactive-hover: #3255a4;
+  --interactive-accent: #00a1e4;
+  --interactive-accent-rgb: 0, 161, 228;
+  --interactive-accent-hover: #33b3e8;
+  --interactive-success: #22c55e;
+  
+  /* Typography - JetBrains Mono everywhere */
+  --font-family-editor: 'JetBrains Mono', 'Courier New', monospace;
+  --font-family-preview: 'JetBrains Mono', 'system-ui', monospace;
+  --font-family-interface: 'JetBrains Mono', 'system-ui', sans-serif;
+  --default-font: 'JetBrains Mono', monospace;
+  
+  /* Font Sizes - Optimized for readability */
+  --font-size-normal: 16px;
+  --font-size-small: 14px;
+  --font-size-smaller: 12px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 20px;
+  
+  /* Line Heights - Optimized for monospace */
+  --line-height-normal: 1.6;
+  --line-height-tight: 1.4;
+  
+  /* Scrollbar Colors */
+  --scrollbar-bg: #1a1a1a;
+  --scrollbar-thumb-bg: #3255a4;
+  --scrollbar-active-thumb-bg: #00a1e4;
+}
+
+/* Global font application */
+* {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Body and Root Styling */
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: var(--text-normal);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Mars atmosphere subtle background effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(205, 92, 92, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(50, 85, 164, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header and Navigation Styling */
+.site-header {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  border-bottom: 2px solid var(--background-modifier-border);
+  backdrop-filter: blur(10px);
+}
+
+.site-header-text {
+  color: var(--text-accent);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 161, 228, 0.3);
+}
+
+/* Navigation Links */
+.nav-header a {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.nav-header a:hover {
+  color: var(--text-accent);
+  text-shadow: 0 0 5px rgba(0, 161, 228, 0.5);
+}
+
+/* Content Area */
+.app-container {
+  background: var(--background-primary);
+}
+
+.workspace {
+  background: var(--background-primary);
+}
+
+/* Sidebar Styling */
+.nav-folder-title,
+.nav-file-title {
+  color: var(--text-normal);
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.nav-folder-title:hover,
+.nav-file-title:hover {
+  color: var(--text-accent);
+  background: var(--background-accent);
+}
+
+.nav-file-title.is-active {
+  background: var(--interactive-accent);
+  color: var(--background-primary);
+  font-weight: 600;
+}
+
+/* Code Blocks - Enhanced for JetBrains Mono */
+pre, code {
+  font-family: 'JetBrains Mono', monospace !important;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+
+.markdown-preview-view pre {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.markdown-preview-view code {
+  background: var(--background-accent);
+  color: var(--text-accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Links - Mars-themed styling */
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-accent-hover);
+  text-shadow: 0 0 8px rgba(0, 161, 228, 0.4);
+}
+
+/* Headers - Emphasized typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-normal);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  color: var(--text-accent);
+  text-shadow: 0 0 15px rgba(0, 161, 228, 0.3);
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: var(--text-accent);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 4px;
+}
+
+/* Blockquotes - Mars-inspired styling */
+blockquote {
+  border-left: 4px solid var(--interactive-accent);
+  background: var(--background-secondary);
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+/* Tables - Enhanced readability */
+table {
+  border-collapse: collapse;
+  background: var(--background-secondary);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th {
+  background: var(--interactive-accent);
+  color: var(--background-primary);
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+tr:hover {
+  background: var(--background-accent);
+}
+
+/* Search Styling */
+.search-suggest-container {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+
+.search-suggest-item {
+  color: var(--text-normal);
+  padding: 8px 12px;
+}
+
+.search-suggest-item:hover,
+.search-suggest-item.is-selected {
+  background: var(--interactive-accent);
+  color: var(--background-primary);
+}
+
+/* Buttons - Mars-themed interactive elements */
+button, .button {
+  background: var(--interactive-accent);
+  color: var(--background-primary);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  background: var(--interactive-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 161, 228, 0.3);
+}
+
+/* Scrollbars - Custom Mars-themed */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 6px;
+  border: 2px solid var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-active-thumb-bg);
+}
+
+/* Tooltips */
+.tooltip {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--font-size-small);
+}
+
+/* Graph View - Mars network styling */
+.graph-view.color-fill {
+  color: var(--interactive-accent);
+}
+
+.graph-view.color-line {
+  color: var(--background-modifier-border);
+}
+
+/* Tag styling - Mars-themed pills */
+.tag {
+  background: var(--background-accent);
+  color: var(--text-accent);
+  border: 1px solid var(--interactive-accent);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: var(--font-size-smaller);
+  font-weight: 500;
+}
+
+.tag:hover {
+  background: var(--interactive-accent);
+  color: var(--background-primary);
+}
+
+/* Status bar */
+.status-bar {
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Custom Mars-themed animations */
+@keyframes mars-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(0, 161, 228, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(0, 161, 228, 0.6);
+  }
+}
+
+/* Apply subtle glow to focused elements */
+.markdown-preview-view h1:hover,
+.site-header-text:hover {
+  animation: mars-pulse 2s ease-in-out infinite;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --font-size-normal: 14px;
+    --font-size-small: 12px;
+    --line-height-normal: 1.5;
+  }
+  
+  .site-header-text {
+    font-size: 18px;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  :root {
+    --text-normal: #ffffff;
+    --text-muted: #cccccc;
+    --background-primary: #000000;
+    --background-secondary: #111111;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+} 
