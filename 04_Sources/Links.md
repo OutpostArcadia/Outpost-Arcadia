@@ -2,6 +2,8 @@
 
 **Purpose:** Quick reference list of important URLs related to Mars colonization research.
 
+> **📚 Comprehensive Sources:** See [[consolidated-sources]] for a complete database of 90+ research sources from all major documents.
+
 ## Official Sources
 - [NASA Mars Exploration](https://mars.nasa.gov/)
 - [SpaceX Mars Program](https://www.spacex.com/mars/)

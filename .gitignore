@@ -1,63 +1,22 @@
-# Outpost Arcadia - Public Vault Only
-# This repository contains only generated content, not the automation engine
+# Obsidian workspace files
+.obsidian/
 
-# ===== PRIVATE CONTENT (EXCLUDED) =====
-
-# Automation scripts and engine code (keep in private repo)
+# Private automation engine (closed source)
 08_Automation/
-07_Templates/
 
-# Sensitive configuration and credentials
-*.env
-*.key
-*secret*
-*private*
-.secrets/
-config/private/
+# Publishing configuration and experiments (private)
+09_Publishing/
 
-# Development and temporary files
+# OS generated files
 .DS_Store
-.vscode/
-.idea/
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
 *.tmp
-*.log
-*.backup
-*~
-
-# Python cache and virtual environments
-__pycache__/
-*.pyc
-*.pyo
-venv/
-.venv/
-env/
-
-# Node modules (if any web components)
-node_modules/
-
-# ===== PUBLIC CONTENT (INCLUDED) =====
-
-# Ensure these are always included even if patterns above might exclude them
-!readme.md
-!01_Daily/
-!02_Topics/
-!03_AI_Chats/
-!04_Sources/
-!05_Media/
-!06_Metadata/
-
-# Include specific file types in public folders
-!*.md
-!*.json
-!*.jsonl
-!*.pdf
-!*.mp3
-!*.png
-!*.jpg
-!*.gif
-!*.mp4
-
-# ===== NOTES =====
-# This .gitignore is designed for the PUBLIC vault repository
-# The automation scripts (08_Automation/) and templates (07_Templates/) should be kept in a separate PRIVATE repository
-# See the project blueprint for the dual-repo architecture 
+*.temp
+*~ 

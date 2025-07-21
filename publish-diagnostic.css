@@ -1,0 +1,113 @@
+/* DIAGNOSTIC TEST CSS for Obsidian Publish */
+/* Replace your publish.css with this content temporarily to test if CSS is working */
+
+/* Extremely obvious visual changes to confirm CSS loads */
+body {
+    background: #ff0000 !important; /* Bright red background */
+    border: 10px solid #00ff00 !important; /* Green border */
+    margin: 0 !important;
+    padding: 20px !important;
+}
+
+/* Make all text white and large */
+* {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+/* Make headers HUGE */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffff00 !important; /* Yellow text */
+    font-size: 48px !important;
+    font-weight: bold !important;
+    text-shadow: 2px 2px 4px #000000 !important;
+}
+
+/* Add a notification at top */
+body::before {
+    content: "🚀 CSS IS WORKING! If you see this, replace with your Mars theme CSS.";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #0000ff !important;
+    color: #ffffff !important;
+    padding: 15px !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    z-index: 9999 !important;
+    border-bottom: 5px solid #ffff00 !important;
+}
+
+/* Push content down to avoid overlap */
+.published-container {
+    margin-top: 80px !important;
+}
+
+/* Style all links */
+a {
+    color: #00ffff !important; /* Cyan links */
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+a:hover {
+    color: #ff00ff !important; /* Magenta on hover */
+    background: #ffffff !important;
+    padding: 2px 4px !important;
+}
+
+/* Style the site header if present */
+.site-header {
+    background: #800080 !important; /* Purple header */
+    color: #ffffff !important;
+    padding: 20px !important;
+    text-align: center !important;
+}
+
+/* Success indicator for mobile */
+@media (max-width: 768px) {
+    body::after {
+        content: "✅ CSS working on mobile too!";
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #008000 !important;
+        color: #ffffff !important;
+        padding: 10px !important;
+        text-align: center !important;
+        font-size: 16px !important;
+        z-index: 9999 !important;
+    }
+}
+
+/*
+INSTRUCTIONS:
+1. Replace your publish.css content with this file
+2. Publish the changes in Obsidian
+3. Visit your site
+
+EXPECTED RESULTS:
+- Bright red background with green border
+- Yellow message at top saying "CSS IS WORKING!"
+- All text white and larger
+- Headers huge and yellow
+
+IF YOU SEE THESE CHANGES:
+✅ CSS publishing works! Replace with your Mars theme CSS
+
+IF YOU DON'T SEE ANY CHANGES:
+❌ CSS isn't being published correctly
+- Check file location (vault root)
+- Check file name (exactly "publish.css")
+- Check publish dialog in Obsidian
+- Verify file appears at: https://yoursite.obsidian.md/publish.css
+
+REMEMBER:
+- JavaScript requires custom domain
+- CSS works on all domains
+- Cache may delay changes by 15-30 minutes
+*/ 
